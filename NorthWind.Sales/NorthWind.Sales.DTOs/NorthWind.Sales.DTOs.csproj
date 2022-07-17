@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="NorthWind.Entities">
+      <HintPath>..\..\NorthWind\NorthWind.Entities\bin\Debug\net6.0\ref\NorthWind.Entities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

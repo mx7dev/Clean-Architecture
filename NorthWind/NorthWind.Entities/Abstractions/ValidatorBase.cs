@@ -9,16 +9,15 @@ using System.Threading.Tasks;
 namespace NorthWind.Entities.Abstractions
 {
 
-    public abstract class ValidatorBase<T>
+    public abstract class ValidatorBase<T>: IValidator<T>
     {
-        /*  CREAR LA ABSTRACCION BASE PARA LOS VALIDADORES */
         readonly IValidationService<T> Service;
         protected ValidatorBase(IValidationService<T> service)
         {
             this.Service = service;
         }
         public List<IFailure> Failures => Service.Failures;
-        public IRule<T> AddRuleFor<TProperty>(Expression<Func<T, TProperty>> expression, bool StopOnFirstFailure) =>
+        public IRule<T> AddRuleFor<TProperty>(Expression<Func<T, TProperty>> expression, bool StopOnFirstFailure= true) =>
             Service.AddRuleFor(expression, StopOnFirstFailure);
 
         public bool Validate(T instance) => Service.Validate(instance);
