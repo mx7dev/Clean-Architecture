@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NorthWind.Entities.Ports
+namespace NorthWind.Entities.Interfaces
 {
-    public interface IPorts<T>
+    public interface IPort<T>
     {
         ValueTask Handle(T dto);
     }

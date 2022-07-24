@@ -19,15 +19,21 @@ namespace NorthWind.Sales.Entities.Aggregates
             var ExistingOrderDetail = OrderDetailsField.FirstOrDefault(o => o.ProductId == orderDetail.ProductId);
             if (ExistingOrderDetail != null)
             {
-                var NewOrderDetail = ExistingOrderDetail.AddQuantity(orderDetail.Quantity);
+
+                OrderDetailsField.Add(
+                    ExistingOrderDetail with
+                {
+                    Quantity = (short)(ExistingOrderDetail.Quantity + orderDetail.Quantity)
+                });
 
                 OrderDetailsField.Remove(ExistingOrderDetail);
-                OrderDetailsField.Add(NewOrderDetail);
+                
             }
             else
             {
                 OrderDetailsField.Add(orderDetail);
             }
         }
+        public void AddDetail(int productId, decimal unitPrice, short quantity) => AddDetail(new OrderDetail(productId, unitPrice, quantity));
     }
 }
