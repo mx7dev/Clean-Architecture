@@ -5,7 +5,15 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enterprise Business Rules", "Enterprise Business Rules", "{92023A99-0FE9-4862-ADB2-6A9E0677A9C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Entities", "NorthWind.Entities\NorthWind.Entities.csproj", "{1B67C15B-3066-44E5-B18F-B58871A7B3C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthWind.Entities", "NorthWind.Entities\NorthWind.Entities.csproj", "{1B67C15B-3066-44E5-B18F-B58871A7B3C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interface Adapters", "Interface Adapters", "{379D3D53-C077-4F7B-A9E1-FFBD2E8E0344}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{4671273C-93C7-4EC3-996F-641D9A16F27E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{92C15854-1469-452A-824E-D9DFA83DFC1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.EFCore.DataContexts", "NorthWind.EFCore.DataContexts\NorthWind.EFCore.DataContexts.csproj", "{D2759E37-CFDA-4C95-9468-656AD86BD536}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +25,19 @@ Global
 		{1B67C15B-3066-44E5-B18F-B58871A7B3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B67C15B-3066-44E5-B18F-B58871A7B3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B67C15B-3066-44E5-B18F-B58871A7B3C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2759E37-CFDA-4C95-9468-656AD86BD536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2759E37-CFDA-4C95-9468-656AD86BD536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2759E37-CFDA-4C95-9468-656AD86BD536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2759E37-CFDA-4C95-9468-656AD86BD536}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1B67C15B-3066-44E5-B18F-B58871A7B3C1} = {92023A99-0FE9-4862-ADB2-6A9E0677A9C8}
+		{4671273C-93C7-4EC3-996F-641D9A16F27E} = {379D3D53-C077-4F7B-A9E1-FFBD2E8E0344}
+		{92C15854-1469-452A-824E-D9DFA83DFC1F} = {4671273C-93C7-4EC3-996F-641D9A16F27E}
+		{D2759E37-CFDA-4C95-9468-656AD86BD536} = {92C15854-1469-452A-824E-D9DFA83DFC1F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5632B247-4733-4BB8-8D3C-40483791E91A}
